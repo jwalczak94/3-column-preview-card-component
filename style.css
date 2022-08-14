@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 html {
@@ -17,5 +17,69 @@ html {
 }
 
 body {
+  background-color: var(--very-light-gray);
   font-size: 15px;
+  color: var(--transparent-white);
+}
+
+main {
+  margin: 50px 0;
+}
+
+section {
+  width: 90%;
+  height: 60vh;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 15px 15px 0 0;
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 15px 15px;
+}
+
+img {
+  padding: 10px 0 25px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+}
+
+p {
+  padding: 30px 0;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 25px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  background-color: var(--very-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1rem;
+}
+
+.sedans button {
+  color: var(--bright-orange);
+}
+
+.suvs button {
+  color: var(--dark-cyan);
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
 }

@@ -31,7 +31,6 @@ body {
 
   font-family: "Lexend Deca", sans-serif;
   background-color: var(--transparent-white);
-  padding: 8rem 0;
 }
 
 img {
@@ -61,6 +60,7 @@ a {
   justify-content: center;
 
   min-height: 100vh;
+  padding: 8rem 0;
 }
 
 .card-component {

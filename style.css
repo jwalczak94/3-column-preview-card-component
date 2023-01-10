@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 
 * {
   margin: 0;
@@ -7,121 +7,150 @@
 }
 
 :root {
-  --bright-orange: hsl(31, 77%, 52%);
-  --dark-cyan: hsl(184, 100%, 22%);
-  --very-dark-cyan: hsl(179, 100%, 13%);
-  --transparent-white: hsla(0, 0%, 100%, 0.75);
-  --very-light-gray: hsl(0, 0%, 95%);
+  --color-sedans: #e38826;
+  --color-suv: #006970;
+  --color-luxury: #004241;
+  --light-grey: #ffffffbf;
+  --transparent-white: #f2f2f2;
+}
+
+/* basic CSS reset */
+/******************************/
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--very-light-gray);
-  font-size: 15px;
-  color: var(--transparent-white);
-}
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 
-.mainbox {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  margin: 30px 0;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.column {
-  padding: 50px;
-}
-
-.sedans {
-  background-color: var(--bright-orange);
-}
-
-.suvs {
-  background-color: var(--dark-cyan);
-}
-
-.luxury {
-  background-color: var(--very-dark-cyan);
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--transparent-white);
 }
 
 img {
-  padding: 10px 0 25px;
-}
-
-h1 {
-  font-size: 2.4rem;
-  font-family: 'Big Shoulders Display', sans-serif;
-  text-transform: uppercase;
-}
-
-p {
-  padding: 30px 0;
-  font-family: 'Lexend Deca', sans-serif;
-  line-height: 25px;
+  display: block;
+  max-width: 100%;
 }
 
 button {
-  border: 2px solid var(--very-light-gray);
-  border-radius: 30px;
-  padding: 12px 30px;
-  background-color: var(--very-light-gray);
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 1rem;
+  font: inherit;
 }
 
-.sedans button {
-  color: var(--bright-orange);
+p {
+  overflow-wrap: break-word;
 }
 
-.suvs button {
-  color: var(--dark-cyan);
+a {
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
 }
 
-.luxury button {
-  color: var(--very-dark-cyan);
+/* LAYOUT */
+/******************************/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
 }
 
-@media (min-width:1024px) {
+.card-component {
+  display: flex;
+  flex-direction: column;
 
-  body {
-    height: 100vh;
-  }
+  margin: 8.8rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-  .mainbox {
-    display: flex;
+.cards {
+  max-width: 325px;
+  padding: 4.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.bg--sedans {
+  background-color: var(--color-sedans);
+}
+
+.bg--suvs {
+  background-color: var(--color-suv);
+}
+
+.bg--luxury {
+  background-color: var(--color-luxury);
+}
+
+.icons {
+  margin-bottom: 1rem;
+}
+
+/* TEXT STYLES */
+/******************************/
+.lead {
+  font-size: 1.5rem;
+  line-height: 25px;
+  color: var(--light-grey);
+}
+
+.text-titles {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  line-height: 48px;
+  color: var(--transparent-white);
+}
+
+/* BUTTON COMPONENTS */
+/******************************/
+.btn {
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  padding: 1.1rem 3rem;
+  background-color: var(--transparent-white);
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  color: var(--transparent-white);
+  background-color: transparent;
+  border-color: (var(--transparent-white));
+}
+
+.btn--sedans {
+  color: var(--color-sedans);
+}
+
+.btn--suvs {
+  color: var(--color-suv);
+}
+
+.btn--luxury {
+  color: var(--color-luxury);
+}
+
+@media (min-width: 1024px) {
+  .card-component {
     flex-direction: row;
-    width: 900px;
   }
 
-  .column {
-    padding: 40px 50px 50px 50px;
+  .cards {
+    max-width: 307px;
   }
-
-  p {
-    margin-bottom: 50px;
-  }
-
-  button {
-    transition: 0.8s;
-  }
-
-  button:hover {
-    color: var(--very-light-gray);
-  }
-
-  .sedans button:hover {
-    background-color: var(--bright-orange);
-  }
-
-  .suvs button:hover {
-    background-color: var(--dark-cyan);
-  }
-
-  .luxury button:hover {
-    background-color: var(--very-dark-cyan);
+  .btn {
+    margin-top: 5.8rem;
   }
 }
